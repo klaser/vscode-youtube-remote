@@ -1,0 +1,44 @@
+{
+	"name": "youtube-remote",
+    "displayName": "YouTube Remote",
+    "publisher": "bqw7cgazfjunieo5qghx4td6a73byfdme3276d74f6xdzxrab42q",
+	"description": "Send a message to a Chrome Extension to toggle the currently-active YouTube Video",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.48.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:youtube-remote.togglevideo"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "youtube-remote.togglevideo",
+				"title": "Play/Pause YouTube or Udemy Video in Chrome"
+			}
+		]
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.48.0",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.0",
+		"@types/node": "^14.0.27",
+		"eslint": "^7.6.0",
+		"glob": "^7.1.6",
+		"mocha": "^8.0.1",
+		"typescript": "^3.8.3",
+		"vscode-test": "^1.4.0"
+	},
+	"dependencies": {
+		"ws": "^7.3.1"
+	}
+}
