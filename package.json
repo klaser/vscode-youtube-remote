@@ -12,7 +12,8 @@
 	],
 	"activationEvents": [
 		"onCommand:youtube-remote.togglevideo"
-	],
+    ],
+    "repository": {"git":"https://github.com/klaser/vscode-youtube-remote"},
 	"main": "./extension.js",
 	"contributes": {
 		"commands": [
